@@ -45,8 +45,10 @@ header {
 
 .heder_bottom {
     margin-top: 20px;
-    @include size(100px, 30px);
+    @include size(100%, 40px);
     display: grid;
+    justify-items: center;
+    align-items: center;
     grid-template-columns: repeat(10, 1fr);
     padding: 5px;
     font-size: 15px;
