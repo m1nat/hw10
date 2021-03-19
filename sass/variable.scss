@@ -1,0 +1,46 @@
+$color: rgb(10, 3, 114);
+$font-family: 'Lato', sans-serif;
+$bgPos: no-repeat center top;
+$just_i_str: stretch;
+$align_i_str: stretch;
+$display: grid;
+$just_i_center: center;
+$align_i_center: center;
+$display_f: flex;
+$just_cont: center;
+$just_i_start: start;
+
+
+%grid_start {
+    display: $display;
+    align-items: $just_i_center;
+    align-items: $just_i_start;
+}
+
+%grid_stretch {
+    justify-items: $just_i_str;
+    align-items: $align_i_str;
+    display: $display;
+}
+
+%grid_center {
+    display: $display;
+    justify-items: $just_i_center;
+    align-items: $just_i_center;
+}
+
+%flex_center {
+    display: $display_f;
+    align-items: $align_i_center;
+    justify-content: $just_cont;
+}
+
+@mixin bgZ_marg($bgZ, $marg) {
+    background-size: $bgZ;
+    margin: $marg;
+}
+
+@mixin size($wdth, $hgt) {
+    width: $wdth;
+    height: $hgt;
+}

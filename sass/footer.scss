@@ -1,0 +1,63 @@
+footer {
+    @extend %grid_center;
+    grid-template-columns: repeat(6, 1fr);
+    @include size(100%, 350px);
+    margin-top: 190px;
+    background: url(./../img/4ntgxuhh2n0.jpg) no-repeat;
+    background-size: 100%;
+    color: blanchedalmond;
+
+    .img {
+        width: 100px;
+        height: 100px;
+        background: url(./../img/logo.svg) $bgPos;
+        background-size: cover;
+    }
+
+    .footer_:nth-child(2), &:nth-child(3), &:nth-child(4) {
+        @extend %grid_center;
+        grid-template-columns: repeat(1, 1fr);
+        @include size(130px, 130px);
+        font-size: 16px;
+    }
+
+    .contact{
+        @extend %flex_center;
+        flex-direction: row;
+        @include size(350px, 40px);
+        margin-top: 100px;
+        margin-left: 50px;
+
+        .facebook, .youtube, .twitter {
+            @include size(40px, 40px);
+            margin-left: 10px;
+            padding-left: 5px;
+        }
+        
+        .facebook {
+            background: url(http://assets.stickpng.com/images/580b57fcd9996e24bc43c53e.png) $bgPos;
+            background-size: 100%;
+        }
+        
+        .skype {
+            background: url(https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Skype-icon.png/1200px-Skype-icon.png) $bgPos;
+            background-size: 100%;
+            @include size(30px, 30px);
+        }
+        
+        .youtube {
+            background: url(http://pngimg.com/uploads/youtube/youtube_PNG21.png) $bgPos;
+            background-size: 100%;
+        }
+        
+        .twitter {
+            background: url(https://1000logos.net/wp-content/uploads/2016/11/Facebook-logo.png) $bgPos;
+            background-size: 100%;
+        }
+
+    }
+
+
+
+
+}

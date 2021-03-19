@@ -1,0 +1,371 @@
+article #article, article #aside {
+  display: grid;
+  align-items: center;
+  align-items: start;
+}
+
+body menu {
+  justify-items: stretch;
+  align-items: stretch;
+  display: grid;
+}
+
+footer, footer .footer_:nth-child(2), footer:nth-child(3), footer:nth-child(4) {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+}
+
+footer .contact {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal_wrapper {
+  display: none;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 170%;
+  background-attachment: scroll;
+  background-color: blue;
+}
+.modal_wrapper:target {
+  display: block;
+  background-attachment: fixed;
+  background: url(./../img/1584968557_18-p-foni-liga-chempionov-40.jpg) no-repeat;
+  background-size: cover;
+}
+.modal_wrapper__inside {
+  margin: 200px 40%;
+  width: 350px;
+  height: 500px;
+  border: 1px outset #0a0372;
+  color: cornsilk;
+  font-size: 20px;
+  display: inline-block;
+}
+.modal_wrapper__inside input {
+  margin-top: 15px;
+  height: 30px;
+  box-shadow: 11px 11px 14px 1px;
+  border-radius: 5px;
+  border: 3px solid red;
+}
+.modal_wrapper__inside input:valid {
+  border: 5px green solid;
+}
+.modal_wrapper__inside input .email, .modal_wrapper__inside input .password, .modal_wrapper__inside input .secondPassword {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+}
+.modal_wrapper__inside input .choice {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: none;
+}
+.modal_wrapper__inside input .choice input, .modal_wrapper__inside input label {
+  margin-left: 10px;
+  box-shadow: none;
+}
+.modal_wrapper__inside input #check {
+  box-shadow: none;
+  margin-left: 10px;
+}
+.modal_wrapper__inside input .btn {
+  margin-top: 20px;
+  font-size: 15px;
+  margin: 20px 40%;
+}
+.modal_wrapper__inside input .btn__submit {
+  width: 80px;
+  height: 45px;
+  border-radius: 5px;
+  color: #ecf7f7;
+  background-color: #0a0372;
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.3em;
+  cursor: pointer;
+}
+.modal_wrapper__inside input .btn form:invalid #btn_submit {
+  pointer-events: none;
+  color: #970c0c;
+}
+.modal_wrapper__inside input .btn h2 {
+  text-align: center;
+  text-decoration: underline;
+  color: cornsilk;
+}
+
+header {
+  width: 100%;
+  height: 80px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  position: relative;
+}
+header #club {
+  margin: 30px;
+  width: 190px;
+  height: 30px;
+  border-top: 1px solid #f3f1f1;
+  border-left: 1px solid #f3f1f1;
+  background-color: #0a0372;
+  font-size: 15px;
+  text-align: center;
+  outline: none;
+  letter-spacing: 2px;
+  color: white;
+}
+header .header_Top:nth-child(2) {
+  background: url(./../img/logo_small.svg) no-repeat center top;
+  background-size: 150px 130px;
+  background-position: center -18px;
+}
+header .header_Top:nth-child(3) {
+  display: grid;
+  grid-template-columns: 86% 14%;
+}
+header .header_Top:nth-child(3) .advertisement:nth-child(1) {
+  background: url(./../img/unnamed.png) no-repeat top right;
+  background-size: 90px 65px;
+}
+header .header_Top:nth-child(3) .advertisement:nth-child(2) {
+  background: url(./../img/nissan.png) no-repeat center top;
+  background-size: 60px 35px;
+  background-position: -2px 16px;
+}
+
+.heder_bottom {
+  margin-top: 20px;
+  width: 100px;
+  height: 30px;
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  padding: 5px;
+  font-size: 15px;
+  text-align: center;
+  font-family: "Lato", sans-serif;
+  transition-duration: 1s;
+  color: white;
+}
+.heder_bottom .header_bottom_ {
+  transition-duration: 1s;
+}
+.heder_bottom .header_bottom_:hover {
+  border-radius: 10px;
+  background-color: turquoise;
+  color: #0a0372;
+}
+
+article {
+  width: 85%;
+  height: 550px;
+  margin: 100px;
+  display: grid;
+  grid-template-columns: 70% 30%;
+  gap: 40px;
+}
+article #article {
+  background: url(./../img/chelsea.webp) no-repeat center top;
+  background-size: 130%;
+  color: white;
+  grid-auto-rows: minmax(550px, auto);
+  transition-duration: 1s;
+}
+article #article p {
+  margin-left: 15px;
+  width: 550px;
+  height: 60px;
+  font-size: 40px;
+  text-align: center;
+}
+article #article:hover {
+  background-size: 140%;
+}
+article #aside {
+  grid-column: repeat(1, 1fr);
+  grid-auto-rows: minmax(40px, auto);
+  color: white;
+  background-color: #0a0372;
+  opacity: 0.6;
+  transition-duration: 1s;
+}
+article #aside:hover {
+  opacity: 1;
+}
+article #aside .news {
+  width: 100%;
+  height: 110px;
+}
+article #aside .news:nth-child(1), article #aside .news:nth-child(2), article #aside .news:nth-child(3), article #aside .news:nth-child(4), article #aside .news:nth-child(5) {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: minmax(110px, auto);
+}
+article #aside .news .text {
+  grid-column: 2/5;
+  align-self: center;
+  font-size: 20px;
+  padding-left: 20px;
+  opacity: 0.6;
+}
+article #aside .news .video {
+  background: url(./../img/sport_football_salah_0405.jpg) no-repeat center top;
+  background-size: 100%;
+  margin: 10px;
+}
+article #aside .news .video_1 {
+  background: url(./../img/river.jpg) no-repeat center top;
+  background-size: 100%;
+  margin: 10px;
+}
+article #aside .news .video_2 {
+  background: url(./../img/a-2.jpg) no-repeat center top;
+  background-size: cover;
+  margin: 10px;
+}
+article #aside .news .video_3 {
+  background: url(./../img/thumb_102698_default_news_size_5.jpeg) no-repeat center top;
+  background-size: cover;
+  margin: 10px;
+}
+article #aside .news .video_4 {
+  background: url(./../img/gladbach.jpeg) no-repeat center top;
+  background-size: cover;
+  margin: 10px;
+}
+
+.advertisement_2 {
+  width: 770px;
+  height: 100px;
+  background: url(./../img/nissan3.jpg) no-repeat center top;
+  background-size: cover;
+  margin-left: 26%;
+  position: absolute;
+  top: 847px;
+}
+
+footer {
+  grid-template-columns: repeat(6, 1fr);
+  width: 100%;
+  height: 350px;
+  margin-top: 190px;
+  background: url(./../img/4ntgxuhh2n0.jpg) no-repeat;
+  background-size: 100%;
+  color: blanchedalmond;
+}
+footer .img {
+  width: 100px;
+  height: 100px;
+  background: url(./../img/logo.svg) no-repeat center top;
+  background-size: cover;
+}
+footer .footer_:nth-child(2), footer:nth-child(3), footer:nth-child(4) {
+  grid-template-columns: repeat(1, 1fr);
+  width: 130px;
+  height: 130px;
+  font-size: 16px;
+}
+footer .contact {
+  flex-direction: row;
+  width: 350px;
+  height: 40px;
+  margin-top: 100px;
+  margin-left: 50px;
+}
+footer .contact .facebook, footer .contact .youtube, footer .contact .twitter {
+  width: 40px;
+  height: 40px;
+  margin-left: 10px;
+  padding-left: 5px;
+}
+footer .contact .facebook {
+  background: url(http://assets.stickpng.com/images/580b57fcd9996e24bc43c53e.png) no-repeat center top;
+  background-size: 100%;
+}
+footer .contact .skype {
+  background: url(https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Skype-icon.png/1200px-Skype-icon.png) no-repeat center top;
+  background-size: 100%;
+  width: 30px;
+  height: 30px;
+}
+footer .contact .youtube {
+  background: url(http://pngimg.com/uploads/youtube/youtube_PNG21.png) no-repeat center top;
+  background-size: 100%;
+}
+footer .contact .twitter {
+  background: url(https://1000logos.net/wp-content/uploads/2016/11/Facebook-logo.png) no-repeat center top;
+  background-size: 100%;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  background-attachment: fixed;
+  background: url(./../img/top-image.jpg) no-repeat center top;
+  background-size: cover;
+}
+body menu {
+  width: 100%;
+  height: 40px;
+  grid-template-columns: repeat(11, 1fr);
+  text-align: center;
+  background: #f2f6f7;
+  background: radial-gradient(circle, #f2f6f7 0%, rgba(144, 150, 156, 0.8267682073) 71%);
+  font-size: 1em;
+}
+body menu .top {
+  opacity: 0.6;
+  font-family: "Lato", sans-serif;
+  letter-spacing: 2px;
+  font-size: 16px;
+  font-weight: bold;
+  transition-duration: 1s;
+}
+body menu .top:nth-child(1) {
+  grid-column: 1/5;
+  background: url(./../img/uefa-logo-black.svg) no-repeat left center;
+  background-position: 21px;
+}
+body menu .top:nth-child(5) {
+  width: 200px;
+}
+body menu .top:nth-child(-1n+8):hover {
+  color: #0a0372;
+}
+body menu .top__modal {
+  text-decoration: none;
+  color: black;
+  transition-duration: 1s;
+}
+body menu .top__modal:hover {
+  color: #0a0372;
+}
+body menu .top__modal select {
+  margin-top: 4px;
+  width: 150px;
+  outline: none;
+  background-color: rgba(144, 150, 156, 0.8267682073);
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+}
+body menu .top__modal select option {
+  background-color: #0a0372;
+  color: white;
+  transition-duration: 1s;
+}
+body menu .top__modal select option:hover {
+  background-color: turquoise;
+  color: #0a0372;
+}

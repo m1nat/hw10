@@ -1,0 +1,93 @@
+.modal_wrapper {
+    display: none;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    @include size(100%, 170%);
+    background-attachment: scroll;
+    background-color: blue;
+  
+    &:target {
+        display: block;
+        background-attachment: fixed;
+        background: url(./../img/1584968557_18-p-foni-liga-chempionov-40.jpg) no-repeat;
+        background-size: cover;
+    }
+  
+    &__inside {
+        margin: 200px 40%;
+        @include size(350px, 500px);
+        border: 1px outset $color;
+        color: cornsilk;
+        font-size: 20px;
+        display: inline-block;
+    
+        input {
+            margin-top: 15px;
+            height: 30px;
+            box-shadow: 11px 11px 14px 1px;
+            border-radius: 5px;
+            border: 3px solid red;
+            
+            &:valid {
+            border: 5px green solid;
+            }
+    
+            .email, .password, .secondPassword {
+                margin-top: 15px;
+                display: flex;
+                flex-direction: column;
+            }
+    
+            .choice {
+                margin-top: 15px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                box-shadow: none;
+            }
+        
+            .choice input, label {
+                margin-left: 10px;
+                box-shadow: none;
+            }
+
+            #check {
+                box-shadow: none;
+                margin-left: 10px;
+            }
+
+            .btn {
+                margin-top: 20px;
+                font-size: 15px;
+                margin: 20px 40%;
+        
+                &__submit {
+                    @include size(80px, 45px);
+                    border-radius: 5px;
+                    color: rgb(236, 247, 247);
+                    background-color: $color;
+                    font-family: 'Dancing Script', cursive;
+                    font-size: 1.3em;
+                    cursor: pointer;
+                }
+                
+            
+                form:invalid #btn_submit{
+                    pointer-events: none;
+                    color: rgb(151, 12, 12);
+                }
+
+                h2 {
+                    text-align: center;
+                    text-decoration: underline;
+                    color: cornsilk;
+                }  
+                
+            }
+
+        }
+  
+    }
+
+}

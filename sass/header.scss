@@ -1,0 +1,69 @@
+header {
+    width: 100%;
+    height: 80px;    
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    position: relative;
+
+    #club {
+        margin: 30px;
+        @include size(190px, 30px);
+        border-top: 1px solid rgb(243, 241, 241);
+        border-left: 1px solid rgb(243, 241, 241);
+        background-color: $color;
+        font-size: 15px;
+        text-align: center   ;
+        outline: none;
+        letter-spacing: 2px;
+        color: white;
+    }
+
+    .header_Top:nth-child(2) {
+        background: url( ./../img/logo_small.svg) $bgPos;
+        background-size: 150px 130px;
+        background-position: center -18px;
+    }
+    
+    .header_Top:nth-child(3) {
+        display: grid;
+        grid-template-columns: 86% 14%;
+
+        .advertisement:nth-child(1) {
+            background: url(./../img/unnamed.png) no-repeat top right;
+            background-size: 90px 65px;
+        }
+        
+        .advertisement:nth-child(2) {
+            background: url(./../img/nissan.png) $bgPos;
+            background-size: 60px 35px;
+            background-position: -2px 16px;
+        }
+
+    }
+
+}
+
+.heder_bottom {
+    margin-top: 20px;
+    @include size(100px, 30px);
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    padding: 5px;
+    font-size: 15px;
+    text-align: center;
+    font-family: $font-family;
+    transition-duration: 1s;
+    color: white;
+
+    .header_bottom_{
+        transition-duration: 1s;
+
+        &:hover {
+            border-radius: 10px;
+            background-color: turquoise;
+            color: $color;
+        }
+    
+    }
+    
+}
